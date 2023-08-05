@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Hi, welcome to the Rock Paper Scissors game!</h1>
+    <h3>Please register your name:</h3>
+    <form action="/game" method="post">
+      <h3>
+        <input
+          id="player-name-textbox"
+          type="text"
+          placeholder="Your name, please?"
+          name="player"
+          oninput="document.getElementById('start-button').removeAttribute('disabled')"
+        />
+      </h3>
+      <input id="start-button" type="submit" value="Start!" disabled />
+    </form>
+  </body>
+</html>
