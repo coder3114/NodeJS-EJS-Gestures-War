@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Page</title>
+  </head>
+  <body>
+    <h3>Hi <%= name %>!</h3>
+    <h3>Please provide your choice:</h3>
+    <form action="/turn" method="post">
+      <input
+        type="radio"
+        name="choice"
+        value="Rock"
+        onclick="document.getElementById('choice-submit').removeAttribute('disabled')"
+      />
+      Rock <br />
+      <input
+        type="radio"
+        name="choice"
+        value="Paper"
+        onclick="document.getElementById('choice-submit').removeAttribute('disabled')"
+      />
+      Paper <br />
+      <input
+        type="radio"
+        name="choice"
+        value="Scissors"
+        onclick="document.getElementById('choice-submit').removeAttribute('disabled')"
+      />
+      Scissors <br /><br />
+      <input id="choice-submit" type="submit" value="I am ready!" disabled="" />
+    </form>
+  </body>
+</html>
