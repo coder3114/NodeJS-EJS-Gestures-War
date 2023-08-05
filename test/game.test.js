@@ -41,7 +41,7 @@ describe("Game route", () => {
     it("should render the game view with player's name", async () => {
       res = await chai
         .request(app)
-        .get("/game")
+        .get(TESTPATH)
         .set("content-type", "application/x-www-form-urlencoded");
       expect(res.text).to.contain("<h3>Hi John Smith!</h3>");
       expect(res.text).to.contain("Please provide your choice:");
