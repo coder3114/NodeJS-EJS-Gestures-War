@@ -1,0 +1,23 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #f0f8ff;
+  /* background-image: url("./images/rps-bg.jpg"); */
+  /* background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  margin-top: 60px;
+}
+
+h2 {
+  padding-top: 20px;
+}
+
+#start-button,
+#restart-button {
+  margin-top: 20px;
+}
