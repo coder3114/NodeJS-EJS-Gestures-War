@@ -17,9 +17,11 @@
       <body>
         <h3>You chose <%= choice %></h3>
         <h3>Computer chose <%= `${computerChoice}` %></h3>
-        <% if(winner != "computer"){ %>
+        <% if(winner == "player"){ %>
         <h3>Congrats! You win!</h3>
-        <% } else{ %>
+        <% } else if(winner == "none") { %>
+        <h3>Alas, a tie!</h3>
+        <% } else if(winner == "computer"){ %>
         <h3>Better luck next time!</h3>
         <% } %>
         <form action="/game" method="get">

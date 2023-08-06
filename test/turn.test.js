@@ -71,4 +71,24 @@ describe("Turn route / POST", async () => {
     expect(res.text).to.contain("<h3>Computer chose Rock</h3>");
     expect(res.text).to.contain("<h3>Congrats! You win!</h3>");
   });
+
+  it("should render the right text when player and computer choose the same", async () => {
+    const req = {
+      body: {
+        choice: "Rock",
+      },
+    };
+
+    const res = await chai
+      .request(app)
+      .post(TESTPATH)
+      .set("content-type", "application/x-www-form-urlencoded")
+      .send(req.body);
+
+    expect(res).to.have.status(200);
+    expect(res).to.be.html;
+    expect(res.text).to.contain("<h3>You chose Rock</h3>");
+    expect(res.text).to.contain("<h3>Computer chose Rock</h3>");
+    expect(res.text).to.contain("<h3>Alas, a tie!</h3>");
+  });
 });

@@ -20,17 +20,13 @@ class Round {
   }
 
   winner(playerChoice, computerChoice) {
-    let winner = "";
-
-    if (
-      playerChoice == computerChoice ||
-      (playerChoice == "Rock" && computerChoice == "Paper") ||
-      (playerChoice == "Paper" && computerChoice == "Scissors") ||
-      (playerChoice == "Scissors" && computerChoice == "Rock")
-    )
-      winner = "computer";
-
-    return winner;
+    return playerChoice == computerChoice
+      ? "none"
+      : (playerChoice == "Rock" && computerChoice == "Paper") ||
+        (playerChoice == "Paper" && computerChoice == "Scissors") ||
+        (playerChoice == "Scissors" && computerChoice == "Rock")
+      ? "computer"
+      : "player";
   }
 }
 
