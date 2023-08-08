@@ -24,8 +24,8 @@ class Round {
   computerPlayer() {
     const computer = new Player("computer");
 
-    let choices = ["Rock", "Paper", "Scissors"];
-    let computerChoice = choices[Math.floor(Math.random() * 3)];
+    let choices = ["Rock", "Paper", "Scissors", "Spock", "Lizard"];
+    let computerChoice = choices[Math.floor(Math.random() * 5)];
 
     computer.setChoice(computerChoice);
     return computerChoice;
@@ -43,8 +43,15 @@ class Round {
     return playerChoice == computerChoice
       ? "none"
       : (playerChoice == "Rock" && computerChoice == "Paper") ||
+        "Spock" ||
         (playerChoice == "Paper" && computerChoice == "Scissors") ||
-        (playerChoice == "Scissors" && computerChoice == "Rock")
+        "Lizard" ||
+        (playerChoice == "Scissors" && computerChoice == "Rock") ||
+        "Spock" ||
+        (playerChoice == "Spock" && computerChoice == "Paper") ||
+        "Lizard" ||
+        (playerChoice == "Lizard" && computerChoice == "Rock") ||
+        "Scissors"
       ? "computer"
       : "player";
   }
