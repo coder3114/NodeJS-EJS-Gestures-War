@@ -8,7 +8,7 @@ app.use(express.static("public"));
 
 const registerRouter = require("./routes/register.js");
 const gameRouter = require("./routes/game.js");
-const turnRouter = require("./routes/turn.js");
+const turnRouter = require("./routes/result.js");
 
 app.use("/", registerRouter);
 app.use("/game", gameRouter);

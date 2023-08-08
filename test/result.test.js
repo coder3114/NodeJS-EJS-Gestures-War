@@ -2,16 +2,23 @@ const chai = require("chai"),
   expect = chai.expect;
 const chaiHttp = require("chai-http");
 const app = require("../app.js");
+const sinon = require("sinon");
 
 const TESTPATH = `/turn`;
 
 chai.use(chaiHttp);
 
-const mockMath = Object.create(global.Math);
-mockMath.random = () => 0;
-global.Math = mockMath;
-
 describe("Turn route / POST", async () => {
+  let mathRandomStub;
+
+  beforeEach(() => {
+    mathRandomStub = sinon.stub(Math, "random").returns(0.0);
+  });
+
+  afterEach(() => {
+    mathRandomStub.restore();
+  });
+
   it("should render the turn view and pass in the correct players choices", async () => {
     const req = {
       body: {
