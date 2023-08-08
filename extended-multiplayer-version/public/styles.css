@@ -1,0 +1,31 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #f0f8ff;
+  margin-top: 60px;
+}
+
+p {
+  padding-top: 10px;
+}
+
+#start-button,
+#restart-button {
+  margin-top: 20px;
+}
+
+#player-1,
+#player-2 {
+  margin-bottom: 0;
+}
+
+#player1-name-textbox {
+  margin-bottom: 10px;
+}
+
+form {
+  padding-top: 20px;
+}
