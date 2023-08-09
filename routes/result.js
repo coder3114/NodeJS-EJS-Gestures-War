@@ -7,7 +7,7 @@ router.post("/", (req, res) => {
   const choice = req.body.choice;
 
   player.setChoice(choice);
-  res.redirect("/turn");
+  res.redirect("/result");
 });
 
 router.get("/", (req, res) => {
@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
   const computerChoice = req.app.locals.round.computerPlayer();
   const winner = req.app.locals.round.winner(player.choice, computerChoice);
 
-  res.render("turn", {
+  res.render("result", {
     name: player.name,
     choice: player.choice,
     computerChoice: computerChoice,

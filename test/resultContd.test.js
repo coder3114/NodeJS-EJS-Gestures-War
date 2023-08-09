@@ -4,11 +4,11 @@ const chaiHttp = require("chai-http");
 const app = require("../app.js");
 const sinon = require("sinon");
 
-const TESTPATH = `/turn`;
+const TESTPATH = `/result`;
 
 chai.use(chaiHttp);
 
-describe("Turn route - additional test to reach 100% test coverage", async () => {
+describe("Result route - additional test to reach 100% test coverage", async () => {
   let mathRandomStub;
 
   beforeEach(() => {

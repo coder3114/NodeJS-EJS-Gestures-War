@@ -5,19 +5,27 @@
 body {
   height: 100%;
   background-color: #f0f8ff;
-  /* background-image: url("./images/rps-bg.jpg"); */
-  /* background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
   margin-top: 60px;
 }
 
-h2 {
-  padding-top: 20px;
+p {
+  padding-top: 10px;
 }
 
 #start-button,
 #restart-button {
   margin-top: 20px;
+}
+
+#player-1,
+#player-2 {
+  margin-bottom: 0;
+}
+
+#player1-name-textbox {
+  margin-bottom: 10px;
+}
+
+form {
+  padding-top: 20px;
 }

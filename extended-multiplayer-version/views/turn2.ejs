@@ -17,12 +17,10 @@
       <body>
         <h3><%= name1 %> chose <%= choice1 %></h3>
         <h3><%= name2 %> chose <%= choice2 %></h3>
-        <% if(winner == "player1"){ %>
-        <h3>Congrats! <%= name1 %> win!</h3>
-        <% } else if(winner == "none") { %>
+        <% if(winner == ""){ %>
         <h3>Alas, a tie!</h3>
-        <% } else if(winner == "player2"){ %>
-        <h3>Congrats! <%= name2 %> win!</h3>
+        <% } else { %>
+        <h3><%= winner %> wins!</h3>
         <% } %>
         <form action="/game2-1" method="get">
           <input id="restart-button" type="submit" value="Play Another Round" />

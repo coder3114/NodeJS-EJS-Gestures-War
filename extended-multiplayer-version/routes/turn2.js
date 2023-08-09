@@ -10,9 +10,14 @@ router.post("/", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  const player1 = req.app.locals.round.currentPlayer2();
+  const player1 = req.app.locals.round.currentPlayer();
   const player2 = req.app.locals.round.otherPlayer();
-  const winner = req.app.locals.round.winner2(player1.choice, player2.choice);
+  const winner = req.app.locals.round.winner(
+    player1.name,
+    player1.choice,
+    player2.name,
+    player2.choice
+  );
   console.log(req.app.locals.round);
 
   res.render("turn2", {

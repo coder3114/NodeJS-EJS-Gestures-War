@@ -4,11 +4,11 @@ const chaiHttp = require("chai-http");
 const app = require("../app.js");
 const sinon = require("sinon");
 
-const TESTPATH = `/turn`;
+const TESTPATH = `/result`;
 
 chai.use(chaiHttp);
 
-describe("Turn route / POST", async () => {
+describe("Result route / POST", async () => {
   let mathRandomStub;
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe("Turn route / POST", async () => {
     mathRandomStub.restore();
   });
 
-  it("should render the turn view and pass in the correct players choices", async () => {
+  it("should render the result view and pass in the correct players choices", async () => {
     const req = {
       body: {
         choice: "Paper",

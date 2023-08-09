@@ -10,12 +10,8 @@ class Round {
   }
 
   computerPlayer() {
-    const computer = new Player("computer");
-
     let choices = ["Rock", "Paper", "Scissors"];
     let computerChoice = choices[Math.floor(Math.random() * 3)];
-
-    computer.setChoice(computerChoice);
     return computerChoice;
   }
 
