@@ -9,7 +9,7 @@ class Round {
     return this.player;
   }
 
-  computerPlayer() {
+  computerChoice() {
     let choices = ["Rock", "Paper", "Scissors"];
     let computerChoice = choices[Math.floor(Math.random() * 3)];
     return computerChoice;

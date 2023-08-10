@@ -12,7 +12,7 @@ router.post("/", (req, res) => {
 
 router.get("/", (req, res) => {
   const player = req.app.locals.round.currentPlayer();
-  const computerChoice = req.app.locals.round.computerPlayer();
+  const computerChoice = req.app.locals.round.computerChoice();
   const winner = req.app.locals.round.winner(player.choice, computerChoice);
 
   res.render("result", {

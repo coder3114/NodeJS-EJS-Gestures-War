@@ -1,62 +1,180 @@
-# RPS Challenge
+# Gesture Wars: 👊🖐️✌️ + 🖖 + 🦎
 
-Instructions
--------
+## Instructions
 
-* Feel free to use google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or trainee, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by the deadline specified in Noodle
+Escape the daily grind and dive into the Rock, Paper, Scissors, Spock and Lizard game! Get ready to choose your weapon and let the games begin! 🎮
 
-Task
-----
+### Game Flow
 
-The DFA team ( **DFAT** ) have asked you to provide a game for them. The daily grind is pretty tough and they need time to have a little fun.
+<img alt="flowchart" src="public\images\RPSSL-Flowchart.jpg">
 
-As usual please start by
+### Key Features:
 
-* Forking this repo
-* TEST driving development of your app
+🌟 **Register Your Name**: type your name to enable the submit button
 
-Your task is to provide a _Rock, Paper, Scissors_ game for them so they can play on the web with the following user stories:
+<img alt="register-button-unable" src="public\images\register0.png" width="45%">
+<img alt="register-button-enable" src="public\images\registerEnabled.png" width="50%">
 
-### Acceptance Criteria
+🎲 **Choose Your Weapon**:
+
+<img alt="choice-button-unable" src="public\images\choiceSelectUnabled.png" width="45%">
+<img alt="choice-button-enable" src="public\images\choiceSelected.png" width="45.5%">
+
+🤖 **Computer Random Choice**: when you are making your decision, the computer is ready to throw down its own choice
+
+🏆 **Winner Announced**: a winner is declared based on the age-old rules of Rock, Paper, Scissors
+
+<img alt="result" src="public\images\result.png" width="50%">
+
+🔄 Play Again: click the **Play Another Round** button if you are ready to redefine your destiny in the next round
+
+👥 **Multiplayer Mode**: choose the mode to play with colleague which allows two competitors play on the same computer
+⚠️ **Make sure to open the extended-multiplayer-version instead of running the basic version!**
+
+<img alt="choice-mode" src="public\images\chooseMode.png" width="38%">
+<img alt="names-no-input" src="public\images\registerNames.png" width="29%">
+<img alt="names-registered" src="public\images\registeredNames.png" width="30%">
+
+⚔️ **Extended Rules**: adventure and play the special rules of Rock, Paper, Scissors, Spock, Lizard
+
+<img alt="player1" src="public\images\player1Choice.png" width="32%">
+<img alt="player2" src="public\images\player2Choice.png" width="32%">
+<img alt="results-for-two" src="public\images\resultForTwo.png" width="33%">
+
+## How the APP was created
+
+### Technologies used
+
+#### Frontend:
+
+- **Bootstrap**
+
+#### Backend:
+
+- **Express** is used to build the backend of the app, handle routes, and manage server-side logic. **EJS** is used to render HTML pages with embedded JavaScript.
+
+#### Testing:
+
+- **Mocha** is used to create tests.
+- **Chai and Chai-HTTP** are assertion libraries used to allow expressive and comprehensive testing of HTTP routes and responses.
+- **Sinon** is a library used for creating mocks and stubs for Math.random method in some of the tests.
+- **nyc** is used to generate code coverage reports.
+
+#### Development:
+
+- **Git** is used as a Version control system.
+- **npm** is used to install and manage project dependencies.
+- **ESLint** is used to help maintain consistent code style.
+
+### User Stories
+
 ```
-As a DFAT member
-So that I can see my name
-I would like to register my name before playing an online game
+Registration:
 
-As a DFAT member
-So that I can enjoy myself away from the daily grind
-I would like to be able to play rock/paper/scissors
+As a DFAT member,
+So that I can play an online game,
+I want to be able to register my name.
+
+Play:
+
+As a playing DFAT member,
+So that I can make a choice,
+I want to see the available choices (rock, paper, scissors).
+
+As a playing DFAT member,
+So that I can participate,
+I want to choose one option (rock, paper, or scissors).
+
+As a playing DFAT member,
+So that the game is fair,
+I want the computer to choose a random option after I make my choice.
+
+As a playing DFAT member,
+So that I can know the result,
+I want the game to declare a winner based on the game rules.
+
+As a playing DFAT member,
+So that I can continue playing,
+I want the option to play again after a game ends.
+
+
+Extended Game Rules:
+
+As a playing DFAT member,
+So that I can have fun with another colleague,
+I want to enable multiplayer mode for two players on the same computer.
+
+As a playing DFAT member,
+So that I can have more fun playing an extended game,
+I want to play using the special rules of Rock, Paper, Scissors, Spock, Lizard.
+
 ```
 
-Hints on functionality
+### Test driven
 
-- the DFAT member should be able to enter their name before the game
-- the DFAT member will be presented the choices (rock, paper and scissors)
-- the DFAT member can choose one option
-- the game will choose a random option
-- a winner will be declared and an option to play again
+A total of 9 tests were written to ensure the test coverage reach 100% for the basic game version.
 
-## Basic Rules
+<img alt="test-coverage" src="public\images\npm-test-coverage.png" >
 
-- Rock beats Scissors
-- Scissors beats Paper
-- Paper beats Rock
+## How to play
 
-In code review we'll be hoping to see:
+To get started with the game, please follow the instructions to set up the application locally.
 
-* All tests passing
-* High test coverage
-* The code is elegant: every class has a clear responsibility, methods are short etc.
+1. Fork and clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/coder3114/rock-paper-scissors-challenge.git
+   ```
+2. Navigate to the project directory:
 
-### Extended Acceptance Criteria
+   2.1 For the basic version
 
-#### Multiplayer
+   ```bash
+   cd rock-paper-scissors-challenge
+   ```
 
-Change the game so that two DFAT members can play against each other ( _yes there are two of them and they'll be playing on the same computer_ ).
+   2.2 For the extended version
 
-#### Rock, Paper, Scissors, Spock, Lizard
+   ```bash
+   cd rock-paper-scissors-challenge/extended-multiplayer-version
+   ```
 
-Use the _special_ rules ( _you can find them here http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock_ )
+3. Install the dependencies using npm:
+
+   ```bash
+   npm init
+   npm install
+   ```
+
+   ⚠️ Install any dependencies specifically required in the console during the process.
+
+4. Start the game:
+
+   ```bash
+   npm start
+   ```
+
+5. Open the link in your browser and you are ready to go:
+
+   ```bash
+   The RPS app is listening at http://localhost:3000
+   ```
+
+6. Run the test and see your coverage:
+
+   ```bash
+   npm test
+   ```
+
+## Acknowledgement
+
+- [digital-futures-academy/rest-apis-with-node-express/resources](https://github.com/digital-futures-academy/rest-apis-with-node-express/tree/main/resources)
+
+- [Post request via Chai](https://stackoverflow.com/questions/35697763/post-request-via-chai)
+
+- [Chai Assertion Library](https://www.chaijs.com/)
+
+- [Node & Express: EJS if/else & if/else if/else conditionals](https://bobbyhadz.com/blog/node-ejs-if-else-conditional-statements)
+
+- [check if radio button is checked in ejs](https://stackoverflow.com/questions/70420057/check-if-radio-button-is-checked-in-ejs)
+
+- [Rock, Paper, Scissors, Spock, Lizard](http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock_)
