@@ -6,7 +6,7 @@ Escape the daily grind and dive into the Rock, Paper, Scissors, Spock and Lizard
 
 ### Game Flow
 
-<img alt="flowchart" src="public\images\RPSSL-Flowchart.jpg">
+<img alt="flowchart" src="public/images/Flowchart -RPSSL-edited.jpg">
 
 ### Key Features:
 
